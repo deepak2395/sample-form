@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+
+  
+</head>
+
+<body>
+
+  <div class="container">
+    <h2>Integra Diwali Celebration</h2>
+    <h4>Products DU Registeration Form</h4>
+    <p>You miss 100% of the shots you don’t take, thats why<code> “participation is important than winning”</code></p>
+    <form action="/users" class="needs-validation" novalidate>
+      <div class="form-group">
+        <label for="uname">Username:</label>
+        <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      <div class="form-group">
+        <label for="uname">IS Number:</label>
+        <input type="text" class="form-control" id="isnum" placeholder="Enter your IS" name="isnum" required>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      <div class="form-group">
+        <label for="events">Events:</label>
+        <select class="form-control" id="events" name="events">
+          <option value="Easy Craft">Easy Craft</option>
+          <option value="Adzap">Adzap</option>
+          <option value="Diwali Sweets">Diwali Sweets</option>
+          <option value="Ethnic Wear">Ethnic Wear</option>
+          <option value="Kid's event">Kid's event</option>
+          <option value="Dance">Dance</option>
+          <option value="Paatu Pada Vaa">Paatu Pada Vaa</option>
+          <option value="Voodu Kattu">Voodu Kattu</option>
+          <option value="Therika Vidalama">Therika Vidalama</option>
+          <option value="Konjam Nadinga Boss">Konjam Nadinga Boss</option>
+          <option value="Odaachi Podu">Odaachi Podu</option>
+          <option value="Pattha Vei">Pattha Vei</option>
+        </select>
+        <div class="valid-feedback">Valid.</div>
+        <div class="invalid-feedback">Please fill out this field.</div>
+      </div>
+      <!-- <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd" required>
+      <div class="valid-feedback">Valid.</div>
+      <div class="invalid-feedback">Please fill out this field.</div>
+    </div> -->
+      <div class="form-group form-check">
+        <label class="form-check-label">
+          <input class="form-check-input" type="checkbox" name="remember" required> I agree on entire terms and
+          conditions.
+          <div class="valid-feedback">Valid.</div>
+          <div class="invalid-feedback">Check this checkbox to continue.</div>
+        </label>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+    <p>                     </p>
+    <p> “Winning is something, but participation is everything.” </p>
+  </div>
+
+  <script>
+    // Disable form submissions if there are invalid fields
+    (function () {
+      'use strict';
+      window.addEventListener('load', function () {
+        // Get the forms we want to add validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+  </script>
+
+</body>
+
+</html>

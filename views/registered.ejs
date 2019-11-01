@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        registered
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+    <div class="jumbotron text-center">
+        <h2>Diwali Registeration details</h2>
+        <!-- <% for (var i =0; i <  user.length ;  i++ ) { %>
+               <br/> <%- user[i]%>
+                <%#  will output the numbers 1-10 %>
+                <% } %> -->
+        <form action="/registered/sort" class="needs-validation" novalidate>
+            <div class="form-group">
+                <label for="events">Events:</label>
+                <select class="form-control" id="events" name="events">
+                    <option value="Easy Craft">Easy Craft</option>
+                    <option value="Adzap">Adzap</option>
+                    <option value="Diwali Sweets">Diwali Sweets</option>
+                    <option value="Ethnic Wear">Ethnic Wear</option>
+                    <option value="Kid's event">Kid's event</option>
+                    <option value="Dance">Dance</option>
+                    <option value="Paatu Pada Vaa">Paatu Pada Vaa</option>
+                    <option value="Voodu Kattu">Voodu Kattu</option>
+                    <option value="Therika Vidalama">Therika Vidalama</option>
+                    <option value="Konjam Nadinga Boss">Konjam Nadinga Boss</option>
+                    <option value="Odaachi Podu">Odaachi Podu</option>
+                    <option value="Pattha Vei">Pattha Vei</option>
+                </select>
+                <div class="valid-feedback">Valid.</div>
+                <div class="invalid-feedback">Please fill out this field.</div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        <p class="lead"> </p>
+        <ul class="list-group">
+            <li class="list-group-item">
+                <b>User - ID - Event</b>
+            </li>
+            <% user.forEach(function(o) { %>
+            <li class="list-group-item">
+                <%= o.user %> -
+                <%= o.registerid %> -
+                <%= o.event %>
+            </li>
+            <% }); %>
+        </ul>
+        
+
+    </div>
+
+</body>
+
+</html>
